@@ -1,1 +1,1 @@
-var omri = 7
+var omri = 7;
