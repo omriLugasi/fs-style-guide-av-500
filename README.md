@@ -1,7 +1,7 @@
 # Anyvision JavaScript Style Guide
 *A mostly reasonable approach to JavaScript*
 
-https://travis-ci.org/omriLugasi/fs-style-guide-av-500.svg?branch=master
+[![Build Status](https://travis-ci.org/omriLugasi/fs-style-guide-av-500.svg?branch=master)](https://travis-ci.org/omriLugasi/fs-style-guide-av-500)
 
 
 ## Table of Contents
