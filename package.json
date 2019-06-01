@@ -1,0 +1,14 @@
+{
+  "name": "fs-style-guide-av-500",
+  "version": "1.0.0",
+  "scripts" : {
+    "lint": "eslint index.js"
+  },
+  "dependencies": {
+    "eslint": "^5.16.0"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/omriLugasi/fs-style-guide-av-500.git",
+  "author": "omri <omlrc1991@gmail.com>",
+  "license": "MIT"
+}
