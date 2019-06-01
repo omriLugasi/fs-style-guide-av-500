@@ -1,12 +1,13 @@
 # Anyvision JavaScript Style Guide
 *A mostly reasonable approach to JavaScript*
 
+https://travis-ci.org/omriLugasi/fs-style-guide-av-500.svg?branch=master
 
 
 ## Table of Contents
  1. [If Else and the things between](#if-else-and-the-things-between)
- 2. 
- 
+ 2.
+
 
 
 
@@ -15,10 +16,10 @@
 ### One liner if "ternary operator"
 
 ```javascript
-  // bad 
+  // bad
   const value = condition ? 60 : anotherCondition ? 50 : 40
-  
-  // good 
+
+  // good
   let value = 60
   if (!condition) {
     value = anotherCondition ? 50 : 40
@@ -27,73 +28,73 @@
 ```
 
   ```javascript
-  
-  // bad 
+
+  // bad
   const value = condition ? true : false
-  
+
   // good
   const value = !!condition
-  
-  // bad 
+
+  // bad
   const value = condition ? false : true
-  
+
   //good
   const value = !condition
-  
+
   ```
 
 ```javascript
-  
-  // bad 
+
+  // bad
    const aVeryVeryVeryLongCondition = veryVeryLongConditionName ? { name: 'anyvision', companyId: '20019292982272661' } : { name: 'seachFace', companyId: '289282871817281272' }
-   
-   // bad 
-   const aVeryVeryVeryLongCondition = veryVeryLongConditionName ? 
+
+   // bad
+   const aVeryVeryVeryLongCondition = veryVeryLongConditionName ?
    { name: 'anyvision', companyId: '20019292982272661' } :
    { name: 'seachFace', companyId: '289282871817281272' }
-   
-   // bad 
-   const aVeryVeryVeryLongCondition = veryVeryLongConditionName ? 
+
+   // bad
+   const aVeryVeryVeryLongCondition = veryVeryLongConditionName ?
    { name: 'anyvision', companyId: '20019292982272661' }
    : { name: 'seachFace', companyId: '289282871817281272' }
-   
-   
-  // good 
+
+
+  // good
    const aVeryVeryVeryLongCondition = veryVeryLongConditionName
    ? { name: 'anyvision', companyId: '20019292982272661' }
    : { name: 'seachFace', companyId: '289282871817281272' }
-  
+
   ```
 
 ```javascript
-  
-  // bad 
+
+  // bad
    let num = 0
    // more code ...
    // more code ...
    condition ? num = 6 : num = 90
-   
-  // good 
+
+  // good
    let num = 0
     // more code ...
     // more code ...
    num = condition ? 6 : 90
-  
+
   ```
 
   ```javascript
-  
-  // bad 
+
+  // bad
   function getElements() {
     condition ? getItems() : getUsers()
   }
-  
+
   //good
   function getElements() {
     const invokeFunc = condition ? getItems : getUsers
     invokeFunc()
   }
-  
+
   //better
   function getElements() {
     if(condition) {
@@ -101,9 +102,9 @@
     }
     getUsers()
   }
-  
+
   ```
-  
+
 ### Return number with if inside function scope
 
 ```javascript
@@ -120,7 +121,7 @@ function getAverageAge(condition, anotherCondition) {
  }
  return number
 }
- 
+
  //good
  function getAverageAge(condition, anotherCondition) {
    if(condition) {
@@ -133,8 +134,8 @@ function getAverageAge(condition, anotherCondition) {
 ### JSX render function with if
 
   ```javascript
-  
-  // bad 
+
+  // bad
   function renderItems(items) {
    if(item && items.length) {
     return (
@@ -142,7 +143,7 @@ function getAverageAge(condition, anotherCondition) {
      )
    }
   }
-  
+
   //good
  function renderItems(items) {
    if(!items || !item.length) {
@@ -150,5 +151,5 @@ function getAverageAge(condition, anotherCondition) {
    }
    return <JSX />
   }
-  
+
   ```
